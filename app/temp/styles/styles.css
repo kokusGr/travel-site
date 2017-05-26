@@ -448,12 +448,12 @@ img {
     font-weight: 300;
     text-shadow: 1px 1px 2px #333;
     max-width: 23.75rem;
-/*
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 3.5rem;
-*/
     margin: 2rem auto;
+  }
+
+.large-hero__image {
+    border-bottom: 9px solid #2f5572;
+    
   }
 
 .btn {
@@ -474,4 +474,44 @@ img {
 
 .btn--blue {
     background-color: #2f5572;
+  }
+
+.page-section {
+  padding-bottom: 3.2rem;
+  padding-top: 3.2rem;
+  max-width: 75rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.headline {
+  color: #2f5572;
+  font-weight: 300;
+  font-size: 2.75rem;
+}
+
+.headline--centered {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.headline--orange {
+    color: #d59541;
+  }
+
+.headline--narrow {
+    max-width: 30rem;
+  }
+
+.headline--small {
+    font-size: 1.875rem;
+  }
+
+.headline--light {
+    font-weight: 200;
+  }
+
+.headline--b-margin-small {
+    margin-bottom: 0;
   }
