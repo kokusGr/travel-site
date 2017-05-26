@@ -1,0 +1,36 @@
+.large-hero {
+  position: relative;
+  
+  &__text-content {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    text-align: center;
+  }
+  
+  &__title {
+    color: $mainBlue;
+    font-size: 4.5rem;
+    font-weight: 300;
+    margin: 0;
+  }
+  
+  &__subtitle {
+    color: $mainBlue;
+    font-weight: 300;
+    font-size: 2.8rem;
+    margin: 0;
+  }
+  
+  &__description {
+    color: #FFF;
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-shadow: 1px 1px 2px #333;
+    max-width: 23.75rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
