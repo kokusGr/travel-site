@@ -1,7 +1,8 @@
 .headline {
   color: $mainBlue;
   font-weight: 300;
-  font-size: 2.75rem;
+  font-size: 2.85rem;
+  letter-spacing: 0.8;
   
   &--centered {
     text-align: center;
@@ -26,6 +27,22 @@
   }
   
   &--b-margin-small {
-    margin-bottom: 0;
+    margin-bottom: 0.5em;
+  }
+  
+  &--b-margin-large {
+    margin-bottom: 1.6em;
+  }
+  
+  strong {
+    font-weight: 500;
+  }
+  
+  &--bold {
+    font-weight: 400;
+  }
+  
+  &--t-margin-none {
+    margin-top: 0;
   }
 }

@@ -1,0 +1,28 @@
+.row {
+  
+  margin-top: 4.1rem;
+  
+  @mixin clearfix;
+  
+  &__column-4 {
+    float: left;
+    width: 33.33%;
+  }
+  
+  &__column-8 {
+    float: left;
+    width: 66.66%
+  }
+  
+  &__column-4--r-padding {
+    padding-right: 4.25rem;
+  }
+  
+  &__column-4--wider {
+    width: 37%;
+  }
+  
+  &__column-8--narrower {
+    width: 63%;
+  }
+}

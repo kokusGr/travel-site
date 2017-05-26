@@ -1,0 +1,18 @@
+.text-container {
+  
+  p {
+    font-size: 1.125rem;
+    font-weight: 300;
+    line-height: 1.65;
+    margin: 1.5rem 0;
+  }
+  
+  p a {
+    font-weight: 700;
+  }
+  
+  p strong {
+    font-weight: 400;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  }
+}
