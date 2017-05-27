@@ -4,25 +4,40 @@
   
   @mixin clearfix;
   
-  &__column-4 {
-    float: left;
-    width: 33.33%;
+  &__column-4-medium {
+    
+    @mixin atMedium {      
+      float: left;
+      width: 33.33%;
+    }
   }
   
-  &__column-8 {
-    float: left;
-    width: 66.66%
+  &__column-8-medium {
+    
+    @mixin atMedium {
+      float: left;
+      width: 66.66%
+    }
   }
   
-  &__column-4--r-padding {
-    padding-right: 4.25rem;
+  &__column-4-medium--r-padding {
+    
+    @mixin atMedium {
+      padding-right: 4.25rem;
+    }
   }
   
-  &__column-4--wider {
-    width: 37%;
+  &__column-4-medium--wider {
+    
+    @mixin atMedium{
+      width: 37%;
+    }
   }
   
-  &__column-8--narrower {
-    width: 63%;
+  &__column-8-medium--narrower {
+    
+    @mixin atMedium {
+      width: 63%;
+    }
   }
 }
