@@ -5,3 +5,15 @@
     display: table;
   }
 }
+
+@define-mixin atSmall {
+  @media (min-width: 33.75rem) {
+    @mixin-content;
+  }
+}
+
+@define-mixin atMedium {
+  @media (min-width: 56.25rem) {
+    @mixin-content;
+  }
+}

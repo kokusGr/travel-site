@@ -439,25 +439,45 @@ a {
 
 .large-hero__title {
     color: #2f5572;
-    font-size: 4.5rem;
+    font-size: 2.8rem;
     font-weight: 300;
     margin: 0;
+  }
+
+@media (min-width: 33.75rem) {
+
+.large-hero__title {
+      font-size: 4.5rem
+  }
   }
 
 .large-hero__subtitle {
     color: #2f5572;
     font-weight: 300;
-    font-size: 2.8rem;
+    font-size: 1.8rem;
     margin: 0;
+  }
+
+@media (min-width: 33.75rem) {
+
+.large-hero__subtitle {
+      font-size: 2.8rem
+  }
   }
 
 .large-hero__description {
     color: #FFF;
-    font-size: 1.5rem;
     font-weight: 300;
     text-shadow: 1px 1px 2px #333;
     max-width: 23.75rem;
     margin: 2rem auto;
+  }
+
+@media (min-width: 33.75rem) {
+
+.large-hero__description {
+      font-size: 1.5rem
+  }
   }
 
 .large-hero__image {
@@ -476,9 +496,17 @@ a {
 }
 
 .btn--large {
-    padding: 0.8rem 2rem;
-    font-size: 1.1rem;
+    padding: 0.7rem 1.8rem;
+    font-size: 0.9rem;
     font-weight: 500;
+  }
+
+@media (min-width: 33.75rem) {
+
+.btn--large {
+      font-size: 1.1rem;
+      padding: 0.8rem 2rem
+  }
   }
 
 .btn--blue {
@@ -546,6 +574,8 @@ a {
   max-width: 61.25rem;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .row {

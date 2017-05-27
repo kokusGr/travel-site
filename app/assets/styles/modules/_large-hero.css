@@ -12,25 +12,36 @@
   
   &__title {
     color: $mainBlue;
-    font-size: 4.5rem;
+    font-size: 2.8rem;
     font-weight: 300;
     margin: 0;
+    
+    @mixin atSmall {
+      font-size: 4.5rem;
+    }
   }
   
   &__subtitle {
     color: $mainBlue;
     font-weight: 300;
-    font-size: 2.8rem;
+    font-size: 1.8rem;
     margin: 0;
+    
+    @mixin atSmall {
+      font-size: 2.8rem;
+    }
   }
   
   &__description {
     color: #FFF;
-    font-size: 1.5rem;
     font-weight: 300;
     text-shadow: 1px 1px 2px #333;
     max-width: 23.75rem;
     margin: 2rem auto;
+    
+    @mixin atSmall {
+      font-size: 1.5rem;
+    }
   }
   
   &__image {
