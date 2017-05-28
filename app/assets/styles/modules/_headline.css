@@ -1,8 +1,12 @@
 .headline {
   color: $mainBlue;
   font-weight: 300;
-  font-size: 2.85rem;
+  font-size: 1.85rem;
   letter-spacing: 0.8;
+  
+  @mixin atMedium {
+    font-size: 2.85rem;
+  }
   
   &--centered {
     text-align: center;
@@ -19,7 +23,11 @@
   }
   
   &--small {
-    font-size: 1.875rem;
+    font-size: 1.2rem;
+    
+    @mixin atMedium {
+      font-size: 1.875rem;
+    }
   }
   
   &--light {
@@ -43,6 +51,16 @@
   }
   
   &--t-margin-none {
-    margin-top: 0;
+    @mixin atMedium {
+      margin-top: 0;
+    }
+  }
+  
+  &--centered-until-medium {
+    text-align: center;
+    
+    @mixin atMedium {
+      text-align: left;
+    }
   }
 }
