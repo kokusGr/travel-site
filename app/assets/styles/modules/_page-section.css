@@ -1,7 +1,10 @@
 .page-section {
   padding-bottom: 3.2rem;
   padding-top: 3.2rem;
-  max-width: 75rem;
   margin-left: auto;
   margin-right: auto;
+  
+  &--blue {
+    background-color: $mainBlue;
+  }
 }

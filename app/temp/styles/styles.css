@@ -516,10 +516,13 @@ a {
 .page-section {
   padding-bottom: 3.2rem;
   padding-top: 3.2rem;
-  max-width: 75rem;
   margin-left: auto;
   margin-right: auto;
 }
+
+.page-section--blue {
+    background-color: #2f5572;
+  }
 
 .headline {
   color: #2f5572;
@@ -598,13 +601,46 @@ a {
   }
   }
 
+.headline--white {
+    color: #FFF;
+  }
+
+.headline--large {
+    font-size: 3.5rem;
+  }
+
+.headline__icon {
+    display: block;
+    margin: 0 auto 1rem;
+    
+  }
+
+@media (min-width: 51rem) {
+
+.headline__icon {
+      display: inline-block;
+      padding-right: 0.8rem;
+      margin: 0
+    
+  }
+  }
+
 .wrapper {
-  max-width: 75rem;
+  max-width: 77rem;
   margin-left: auto;
   margin-right: auto;
   padding-left: 1rem;
   padding-right: 1rem;
+  overflow: hidden;
 }
+
+@media (min-width: 33.75rem) {
+
+.wrapper {
+    padding-right: 2rem;
+    padding-left: 2rem
+}
+  }
 
 @media (min-width: 75rem) {
 
@@ -644,6 +680,29 @@ a {
     display: table;
   }
 
+.row--gutters {
+    margin-right: -4rem;
+  }
+
+.row--gutters > div {
+    padding-right: 4rem;
+  }
+
+.row--gutters-large {
+    margin-right: -8rem;
+  }
+
+.row--gutters-large > div {
+    padding-right: 8rem;
+  }
+
+@media (min-width: 33.75rem) {
+
+.row--extra-l-padding {
+      padding-left: 3.5rem
+  }
+  }
+
 @media (min-width: 51rem) {
 
 .row__column-4-medium {      
@@ -662,13 +721,6 @@ a {
 
 @media (min-width: 51rem) {
 
-.row__column-4-medium--r-padding {
-      padding-right: 4.25rem
-  }
-  }
-
-@media (min-width: 51rem) {
-
 .row__column-4-medium--wider {
       width: 37%
   }
@@ -678,6 +730,14 @@ a {
 
 .row__column-8-medium--narrower {
       width: 63%
+  }
+  }
+
+@media (min-width: 51rem) {
+
+.row__column-6-medium {
+      float: left;
+      width: 50%
   }
   }
 
@@ -702,4 +762,57 @@ a {
 .text-container p strong {
     font-weight: 400;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  }
+
+.feature-item {  
+  color: #FFF;
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 33.75rem) {
+
+.feature-item {
+    padding-left: 5.875rem;
+    margin-bottom: 5rem
+}
+  }
+
+.feature-item__text {
+    font-weight: 200;
+    line-height: 1.8;
+    margin-top: 0.8rem;
+    font-size: 1.1rem;
+  }
+
+.feature-item__icon {
+    display: block;
+    margin: 0 auto;
+  }
+
+@media (min-width: 33.75rem) {
+
+.feature-item__icon {
+      position: absolute;
+      left: 0;
+      float: left
+  }
+  }
+
+.feature-item__title {
+    font-size: 1.7rem;
+    font-weight: 400;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+@media (min-width: 33.75rem) {
+
+.feature-item__title {
+      text-align: left
+  }
+  }
+
+.feature-item--b-margin {
+    
   }

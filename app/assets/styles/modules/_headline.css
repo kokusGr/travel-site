@@ -63,4 +63,24 @@
       text-align: left;
     }
   }
+  
+  &--white {
+    color: #FFF;
+  }
+  
+  &--large {
+    font-size: 3.5rem;
+  }
+  
+  &__icon {
+    display: block;
+    margin: 0 auto 1rem;
+    
+    @mixin atMedium {
+      display: inline-block;
+      padding-right: 0.8rem;
+      margin: 0;
+    }
+    
+  }
 }
