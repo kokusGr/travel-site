@@ -1,0 +1,23 @@
+.site-footer {
+  background: $mainBlue;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  text-align: center;
+  
+  &__text {
+    color: #FFF;
+    font-weight: 200;
+    font-size: 0.9rem;
+  }
+  
+  &__btn {
+    display: block;
+    max-width: 66%;
+    margin: 1rem auto 0;
+    
+    @mixin atSmall {
+      display: inline-block;
+      margin: 0 0 0 2rem;
+    }
+  }
+}
