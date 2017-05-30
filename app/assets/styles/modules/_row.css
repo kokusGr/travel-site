@@ -24,6 +24,14 @@
     padding-right: 8rem;
   }
   
+  &--gutters-small {
+    margin-right: -2rem;
+  }
+  
+  &--gutters-small > div {
+    padding-right: 2rem;
+  }
+  
   &--extra-l-padding {
     @mixin atSmall {
       padding-left: 3.5rem;
@@ -64,6 +72,20 @@
     @mixin atMedium {
       float: left;
       width: 50%;
+    }
+  }
+  
+  &--equal-height {
+    @mixin atMedium {
+      display: flex;
+    }
+    
+    & > div {
+      
+      @mixin atMedium {
+        display: flex;
+        float: none;
+      }
     }
   }
 }

@@ -72,6 +72,12 @@
     font-size: 3.5rem;
   }
   
+  &--large-from-small {
+    @mixin atSmall {
+      font-size: 3.5rem;
+    }
+  }
+  
   &__icon {
     display: block;
     margin: 0 auto 1rem;
@@ -80,7 +86,15 @@
       display: inline-block;
       padding-right: 0.8rem;
       margin: 0;
-    }
-    
+    }    
+  }
+  
+  &__icon--lower {
+    position: relative;
+    top: 1rem;
+  }
+  
+  &__icon--r-padding-large {
+    padding-right: 1.8rem;
   }
 }
