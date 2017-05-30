@@ -952,3 +952,30 @@ a {
 .testimonial--last {
     margin-bottom: 0;
   }
+
+.site-footer {
+  background: #2f5572;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  text-align: center;
+}
+
+.site-footer__text {
+    color: #FFF;
+    font-weight: 200;
+    font-size: 0.9rem;
+  }
+
+.site-footer__btn {
+    display: block;
+    max-width: 66%;
+    margin: 1rem auto 0;
+  }
+
+@media (min-width: 33.75rem) {
+
+.site-footer__btn {
+      display: inline-block;
+      margin: 0 0 0 2rem
+  }
+  }
