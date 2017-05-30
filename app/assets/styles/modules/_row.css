@@ -81,8 +81,11 @@
     }
     
     & > div {
-      display: flex;
-      float: none;
+      
+      @mixin atMedium {
+        display: flex;
+        float: none;
+      }
     }
   }
 }

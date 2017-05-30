@@ -525,8 +525,26 @@ a {
   }
 
 .page-section--testimonials {
-    background: url('/assets/images/testimonials-bg.jpg') top center no-repeat;
-    background-size: cover;
+    background: #d3e7ed;
+  }
+
+@media (min-width: 51rem) {
+
+.page-section--testimonials {
+      background: url('/assets/images/testimonials-bg.jpg') top center no-repeat;
+      background-size: cover
+  }
+  }
+
+.page-section--no-b-padding-until-medium {
+    padding-bottom: 0;
+  }
+
+@media (min-width: 51rem) {
+
+.page-section--no-b-padding-until-medium {
+      padding-bottom: 3.2rem
+  }
   }
 
 .headline {
@@ -614,6 +632,13 @@ a {
     font-size: 3.5rem;
   }
 
+@media (min-width: 33.75rem) {
+
+.headline--large-from-small {
+      font-size: 3.5rem
+  }
+  }
+
 .headline__icon {
     display: block;
     margin: 0 auto 1rem;    
@@ -672,6 +697,19 @@ a {
 .wrapper .wrapper {
     padding-left: 0;
     padding-right: 0;
+  }
+
+.wrapper--no-padding-until-medium {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+@media (min-width: 51rem) {
+
+.wrapper--no-padding-until-medium {
+      padding-left: 1rem;
+      padding-right: 1rem
+  }
   }
 
 .row {
@@ -770,12 +808,15 @@ a {
   }
   }
 
+@media (min-width: 51rem) {
+
 .row--equal-height > div {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      float: none;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        float: none
     }
+  }
 
 .text-container p {
     font-size: 0.9rem;
@@ -855,10 +896,17 @@ a {
 
 .testimonial {
   background: rgba(255, 255, 255, 0.8);
-  padding-left: 1.8rem;
-  padding-right: 1.8rem;
-  padding-bottom: .5rem;
+  padding: 0 1rem .5rem;
+  margin-top: 7rem;
 }
+
+@media (min-width: 51rem) {
+
+.testimonial {
+    margin-top: 3rem;
+    padding: 0 1.8rem .5rem
+}
+  }
 
 .testimonial__image {
     border: 6px solid #FFF;
@@ -891,6 +939,16 @@ a {
 
 .testimonial__text {
     line-height: 1.65;
-    font-size: 1.15rem;
     font-weight: 300;
+  }
+
+@media (min-width: 51rem) {
+
+.testimonial__text {
+      font-size: 1.15rem
+  }
+  }
+
+.testimonial--last {
+    margin-bottom: 0;
   }
