@@ -490,9 +490,9 @@ a {
   color: #FFF;
   background-color: #d59541;
   padding: 0.5rem 1.75rem;
-  font-size: 0.9rem;
   font-weight: 400;
   display: inline-block;
+  font-size: 1rem;
 }
 
 .btn--large {
@@ -978,4 +978,52 @@ a {
       display: inline-block;
       margin: 0 0 0 2rem
   }
+  }
+
+.site-header {
+  position: absolute;
+  z-index: 1;
+  background-color: rgba(47,85,114, 0.3);
+  width: 100%;
+}
+
+.site-header__btn {
+    float: right;
+    margin-top: .7rem;
+    margin-bottom: .7rem;
+  }
+
+.site-header__logo {
+    position: absolute;
+    background-color: #2f5572;
+    padding: 2rem;
+  }
+
+.primary-nav--float-right {
+    float: right;
+  }
+
+.primary-nav ul {
+    margin: 0;
+    padding: 0;}
+
+.primary-nav ul::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+.primary-nav li {
+    float: left;
+    list-style: none;
+    padding-right: 2rem;
+  }
+
+.primary-nav a {
+    color: #FFF;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 1rem;
+    padding-top: 1.125rem;
+    display: block;
   }
