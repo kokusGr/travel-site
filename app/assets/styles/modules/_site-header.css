@@ -1,18 +1,120 @@
 .site-header {
   position: absolute;
   z-index: 1;
-  background-color: rgba($mainBlue, 0.3);
   width: 100%;
+  transition: background-color .5s ease-out;
+
+  @mixin atMedium {
+    background-color: rgba($mainBlue, 0.3);
+  }
+  
+  &--blue-overlay {
+    background-color: rgba($mainBlue, .65);
+  }
   
   &__btn {
-    float: right;
-    margin-top: .7rem;
-    margin-bottom: .7rem;
+
+    margin: 0;
+    
+    @mixin atMedium {
+      float: right;
+      margin-top: .7rem;
+      margin-bottom: .7rem;
+    }
   }
   
   &__logo {
-    position: absolute;
     background-color: $mainBlue;
     padding: 2rem;
+    transform: scale(0.7);
+    transform-origin: top;
+    display: block;
+    margin: 0 auto;      
+    
+    @mixin atMedium {
+      position: absolute;
+      transform: scale(1);
+    }
   }
+  
+  &__menu-content {
+    position: relative;
+    opacity: 0;
+    text-align: center;
+    transform: scale(1.2);
+    transition: all .5s ease-out;
+    z-index: -2;
+    
+    @mixin atMedium {
+      opacity: 1;
+      z-index: 2;
+      transform: scale(1);
+    }
+    
+    &--is-visible {
+      z-index: 2;
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+/*  Begin styling menu icon and menu icon animations*/
+  &__menu-icon {
+    
+    @mixin atMedium {
+      display: none;
+    }
+    
+    &::before {
+      content: "";
+      position: absolute;
+      top: 8px;
+      right: 10px;
+      background-color: #FFF;
+      width: 20px;
+      height: 2px;
+      transform-origin: 0 0;
+      transition: transform .3s ease-out;
+    }
+    
+    &--middle {      
+      position: absolute;
+      top: 15px;
+      right: 10px;
+      background-color: #FFF;
+      width: 20px;
+      height: 2px;
+      transition: all .3s ease-out;
+    }
+    
+    &::after {
+      content: "";
+      position: absolute;
+      top: 22px;
+      right: 10px;
+      background-color: #FFF;
+      width: 20px;
+      height: 2px;
+      transform-origin: 0 0;
+      transition: transform .3s ease-out;
+    }
+    
+    &--close-x {
+      
+      &::before {
+        transform: rotate(45deg) scaleX(1.1);
+      }
+      
+      .site-header__menu-icon--middle {
+        opacity: 0;
+        width: 0;
+      }
+      
+      &::after {
+        transform: rotate(-45deg) scaleX(1.1) translateX(-2px);
+      }
+    }
+  }
+  
+/*  Finished styling menu icon*/
 }
