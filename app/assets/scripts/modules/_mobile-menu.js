@@ -30,4 +30,4 @@ var mobileMenu = function() {
 };
 
 
-module.exports = mobileMenu();
+export default mobileMenu();
