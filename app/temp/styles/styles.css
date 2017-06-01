@@ -993,8 +993,10 @@ a {
   position: absolute;
   z-index: 1;
   width: 100%;
-  -webkit-transition: background-color .5s ease-out;
-  transition: background-color .5s ease-out;
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+  -webkit-transform: scale(1);
+          transform: scale(1);
   
 /*  Finished styling menu icon*/
 }
@@ -1002,8 +1004,15 @@ a {
 @media (min-width: 51rem) {
 
 .site-header {
-    background-color: rgba(47,85,114, 0.3)
+    background-color: rgba(47,85,114, 0.3);
+    position: fixed
 }
+    
+    .site-header--sticky {
+      background-color: rgba(2,20,51, .8);
+      -webkit-transform: scale(1.05);
+              transform: scale(1.05);
+    }
   }
 
 .site-header--blue-overlay {
@@ -1033,6 +1042,10 @@ a {
             transform-origin: top;
     display: block;
     margin: 0 auto;
+    -webkit-transition: -webkit-transform .5s ease-out;
+    transition: -webkit-transform .5s ease-out;
+    transition: transform .5s ease-out;
+    transition: transform .5s ease-out, -webkit-transform .5s ease-out;
   }
 
 @media (min-width: 51rem) {
@@ -1042,6 +1055,11 @@ a {
       -webkit-transform: scale(1);
               transform: scale(1)
   }
+      
+      .site-header--sticky .site-header__logo {
+        -webkit-transform: scale(.49);
+                transform: scale(.49);
+      }
   }
 
 .site-header__menu-content {
@@ -1208,6 +1226,10 @@ a {
       padding-top: 1.125rem;
       font-weight: 300
   }
+      
+      .primary-nav a.is-highlighted {
+        color: #d5d540;
+      }
   }
 
 .reveal-item {

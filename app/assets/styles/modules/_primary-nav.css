@@ -50,6 +50,10 @@
     @mixin atMedium {
       padding-top: 1.125rem;
       font-weight: 300;
+      
+      &.is-highlighted {
+        color: $highlight;
+      }
     }
   }
 }

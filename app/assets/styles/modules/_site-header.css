@@ -2,10 +2,17 @@
   position: absolute;
   z-index: 1;
   width: 100%;
-  transition: background-color .5s ease-out;
+  transition: all .5s ease-out;
+  transform: scale(1);
 
   @mixin atMedium {
     background-color: rgba($mainBlue, 0.3);
+    position: fixed;
+    
+    &--sticky {
+      background-color: rgba($darkBlue, .8);
+      transform: scale(1.05);
+    }
   }
   
   &--blue-overlay {
@@ -29,11 +36,16 @@
     transform: scale(0.7);
     transform-origin: top;
     display: block;
-    margin: 0 auto;      
+    margin: 0 auto;
+    transition: transform .5s ease-out;
     
     @mixin atMedium {
       position: absolute;
       transform: scale(1);
+      
+      .site-header--sticky & {
+        transform: scale(.49);
+      }
     }
   }
   
