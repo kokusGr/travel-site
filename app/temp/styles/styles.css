@@ -1209,3 +1209,17 @@ a {
       font-weight: 300
   }
   }
+
+.reveal-item {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+
+.reveal-item--hidden {
+    opacity: 0;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
