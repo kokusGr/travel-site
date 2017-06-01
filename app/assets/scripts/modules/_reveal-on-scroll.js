@@ -1,4 +1,3 @@
-'use strict';
 /*jshint esversion: 6 */
 
 import waypoints from '../../../../node_modules/waypoints/lib/noframework.waypoints';
@@ -47,4 +46,4 @@ var revealOnScroll = function () {
   };
 };
 
-export default revealOnScroll();
+export default revealOnScroll;
