@@ -3,6 +3,6 @@ import revealOnScroll from './modules/_reveal-on-scroll';
 
 mobileMenu.init();
 revealOnScroll.init({
-  offset: '50%', 
+  offset: '75%',
   selectors: ['feature-item', 'testimonial']
 });

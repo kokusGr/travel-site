@@ -260,7 +260,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 _mobileMenu2.default.init();
 _revealOnScroll2.default.init({
-  offset: '50%',
+  offset: '75%',
   selectors: ['feature-item', 'testimonial']
 });
 
