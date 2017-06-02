@@ -45,7 +45,7 @@
       left: auto;
       
       .site-header--sticky & {
-        transform: scale(.49);
+        transform: scale(.48);
       }
     }
     
