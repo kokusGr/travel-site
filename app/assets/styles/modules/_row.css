@@ -75,7 +75,7 @@
     }
   }
   
-  &--equal-height {
+  .flexbox &--equal-height {
     @mixin atMedium {
       display: flex;
     }

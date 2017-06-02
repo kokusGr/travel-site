@@ -9,9 +9,9 @@ var revealOnScroll = function () {
   
   let refreshWaypointsListener = function() {
     for (let item of lazyImages) {
-      item.addEventListener('load', Waypoint.refreshAll)
+      item.addEventListener('load', Waypoint.refreshAll);
     }
-  }
+  };
   
   let setItemsToReveal = function (selectors) {
     if(typeof selectors === 'string') {
