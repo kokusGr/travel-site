@@ -1347,6 +1347,19 @@ a {
     z-index: 3;
   }
 
+@media (min-width: 51rem) {
+
+.modal__content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%)
+    
+    
+  }
+  }
+
 .modal__description {
     text-align: center;
     font-size: 1rem;

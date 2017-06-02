@@ -919,6 +919,13 @@ var modal = function modal() {
     }
 
     closeButton.addEventListener('click', closeModal);
+    document.addEventListener('keydown', function (e) {
+      keyPressHandler(e);
+    });
+  };
+
+  var keyPressHandler = function keyPressHandler(e) {
+    if (e.which === 27) closeModal();
   };
 
   var closeModal = function closeModal() {

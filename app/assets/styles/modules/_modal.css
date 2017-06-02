@@ -17,6 +17,18 @@
     z-index: 3;
   }
   
+  &__content {    
+    
+    @mixin atMedium {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    
+    
+  }
+  
   &__description {
     text-align: center;
     font-size: 1rem;
