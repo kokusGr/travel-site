@@ -15,6 +15,14 @@ var modal = function () {
     }
     
     closeButton.addEventListener('click', closeModal);
+    document.addEventListener('keydown', function(e){
+      keyPressHandler(e);
+    });
+  };
+  
+  let keyPressHandler = function(e) {
+    if(e.which === 27)
+      closeModal();
   };
   
   let closeModal = function () {
