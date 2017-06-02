@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -881,6 +881,72 @@ exports.default = mobileMenu();
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+/*jshint esversion: 6 */
+
+var modal = function modal() {
+  var modal = document.querySelector('.modal');
+  var triggers = document.getElementsByClassName('btn');
+  var closeButton = document.getElementsByClassName('modal__close-x')[0];
+
+  var showModal = function showModal() {
+    modal.classList.remove('modal--is-hidden');
+  };
+
+  var addEvents = function addEvents() {
+    var _iteratorNormalCompletion = true;
+    var _didIteratorError = false;
+    var _iteratorError = undefined;
+
+    try {
+      for (var _iterator = triggers[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+        var item = _step.value;
+
+        item.addEventListener('click', showModal);
+      }
+    } catch (err) {
+      _didIteratorError = true;
+      _iteratorError = err;
+    } finally {
+      try {
+        if (!_iteratorNormalCompletion && _iterator.return) {
+          _iterator.return();
+        }
+      } finally {
+        if (_didIteratorError) {
+          throw _iteratorError;
+        }
+      }
+    }
+
+    closeButton.addEventListener('click', closeModal);
+  };
+
+  var closeModal = function closeModal() {
+    modal.classList.add('modal--is-hidden');
+  };
+
+  var init = function init() {
+    closeModal();
+    addEvents();
+  };
+
+  return {
+    init: init
+  };
+};
+
+exports.default = modal();
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 
 var _noframework = __webpack_require__(0);
 
@@ -1004,7 +1070,7 @@ var revealOnScroll = function revealOnScroll() {
 exports.default = revealOnScroll;
 
 /***/ }),
-/* 3 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1137,7 +1203,7 @@ var stickyHeader = function stickyHeader() {
 exports.default = stickyHeader();
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1148,13 +1214,17 @@ var _mobileMenu = __webpack_require__(1);
 
 var _mobileMenu2 = _interopRequireDefault(_mobileMenu);
 
-var _revealOnScroll = __webpack_require__(2);
+var _revealOnScroll = __webpack_require__(3);
 
 var _revealOnScroll2 = _interopRequireDefault(_revealOnScroll);
 
-var _stickyHeader = __webpack_require__(3);
+var _stickyHeader = __webpack_require__(4);
 
 var _stickyHeader2 = _interopRequireDefault(_stickyHeader);
+
+var _modal = __webpack_require__(2);
+
+var _modal2 = _interopRequireDefault(_modal);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1166,6 +1236,8 @@ _mobileMenu2.default.init();
 });
 
 _stickyHeader2.default.init();
+
+_modal2.default.init();
 
 /***/ })
 /******/ ]);
