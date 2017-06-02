@@ -31,22 +31,32 @@
   }
   
   &__logo {
+    position: absolute;
     background-color: $mainBlue;
     padding: 2rem;
-    transform: scale(0.7);
-    transform-origin: top;
-    display: block;
-    margin: 0 auto;
+    transform: translateX(-50%) scale(0.7);
+    transform-origin: 50% 0;
     transition: transform .5s ease-out;
+    left: 50%;
     
     @mixin atMedium {
-      position: absolute;
-      transform: scale(1);
+      
+      transform: translateX(0) scale(1);
+      left: auto;
       
       .site-header--sticky & {
         transform: scale(.49);
       }
     }
+    
+    .icon {
+      display: block;
+      margin: 0;
+    }
+  }
+  
+  &__logo-graphic {
+    text-indent: -9999px;
   }
   
   &__menu-content {
@@ -56,11 +66,13 @@
     transform: scale(1.2);
     transition: all .5s ease-out;
     z-index: -2;
+    padding-top: 8rem;
     
     @mixin atMedium {
       opacity: 1;
       z-index: 2;
       transform: scale(1);
+      padding-top: 0;
     }
     
     &--is-visible {
@@ -72,6 +84,9 @@
   
 /*  Begin styling menu icon and menu icon animations*/
   &__menu-icon {
+    position: absolute;
+    right: 0px;
+    z-index: 4;
     
     @mixin atMedium {
       display: none;
@@ -89,7 +104,7 @@
       transition: transform .3s ease-out;
     }
     
-    &--middle {      
+    &--middle {
       position: absolute;
       top: 15px;
       right: 10px;

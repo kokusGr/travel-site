@@ -5,6 +5,13 @@ import waypoints from '../../../../node_modules/waypoints/lib/noframework.waypoi
 var revealOnScroll = function () {
   
   let itemsToReveal = [];
+  let lazyImages = document.getElementsByClassName('lazyload');
+  
+  let refreshWaypointsListener = function() {
+    for (let item of lazyImages) {
+      item.addEventListener('load', Waypoint.refreshAll)
+    }
+  }
   
   let setItemsToReveal = function (selectors) {
     if(typeof selectors === 'string') {
@@ -21,6 +28,7 @@ var revealOnScroll = function () {
     setItemsToReveal(settings.selectors);
     hideInitially();
     createWaypoints(offset);
+    refreshWaypointsListener();
   };
   
   let hideInitially = function () {
