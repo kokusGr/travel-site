@@ -886,10 +886,8 @@ Object.defineProperty(exports, "__esModule", {
 var modal = function modal() {
   var modal = document.querySelector('.modal');
   var triggers = document.getElementsByClassName('btn');
+  var closeButton = document.getElementsByClassName('modal__close-x')[0];
 
-  var hideInitially = function hideInitially() {
-    modal.classList.add('modal--is-hidden');
-  };
   var showModal = function showModal() {
     modal.classList.remove('modal--is-hidden');
   };
@@ -919,10 +917,16 @@ var modal = function modal() {
         }
       }
     }
+
+    closeButton.addEventListener('click', closeModal);
+  };
+
+  var closeModal = function closeModal() {
+    modal.classList.add('modal--is-hidden');
   };
 
   var init = function init() {
-    hideInitially();
+    closeModal();
     addEvents();
   };
 
