@@ -12,8 +12,10 @@
     background: #d3e7ed;
     
     @mixin atMedium {
-      background: url('/assets/images/testimonials-bg.jpg') top center no-repeat;
-      background-size: cover;
+      &.lazyloaded{
+        background: url('/assets/images/testimonials-bg.jpg') top center no-repeat;
+        background-size: cover;
+      }
     }
   }
   

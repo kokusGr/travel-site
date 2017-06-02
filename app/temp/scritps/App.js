@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -965,21 +965,18 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 var revealOnScroll = function revealOnScroll() {
 
   var itemsToReveal = [];
+  var lazyImages = document.getElementsByClassName('lazyload');
 
-  var setItemsToReveal = function setItemsToReveal(selectors) {
-    if (typeof selectors === 'string') {
-      selectors = [selectors];
-    }
-
+  var refreshWaypointsListener = function refreshWaypointsListener() {
     var _iteratorNormalCompletion = true;
     var _didIteratorError = false;
     var _iteratorError = undefined;
 
     try {
-      for (var _iterator = selectors[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+      for (var _iterator = lazyImages[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
         var item = _step.value;
 
-        itemsToReveal.push.apply(itemsToReveal, _toConsumableArray(document.getElementsByClassName(item)));
+        item.addEventListener('load', Waypoint.refreshAll);
       }
     } catch (err) {
       _didIteratorError = true;
@@ -997,23 +994,20 @@ var revealOnScroll = function revealOnScroll() {
     }
   };
 
-  var init = function init(settings) {
-    var offset = settings.offset || '80%';
-    setItemsToReveal(settings.selectors);
-    hideInitially();
-    createWaypoints(offset);
-  };
+  var setItemsToReveal = function setItemsToReveal(selectors) {
+    if (typeof selectors === 'string') {
+      selectors = [selectors];
+    }
 
-  var hideInitially = function hideInitially() {
     var _iteratorNormalCompletion2 = true;
     var _didIteratorError2 = false;
     var _iteratorError2 = undefined;
 
     try {
-      for (var _iterator2 = itemsToReveal[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+      for (var _iterator2 = selectors[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
         var item = _step2.value;
 
-        item.classList.add('reveal-item', 'reveal-item--hidden');
+        itemsToReveal.push.apply(itemsToReveal, _toConsumableArray(document.getElementsByClassName(item)));
       }
     } catch (err) {
       _didIteratorError2 = true;
@@ -1031,26 +1025,24 @@ var revealOnScroll = function revealOnScroll() {
     }
   };
 
-  var createWaypoints = function createWaypoints(offset) {
+  var init = function init(settings) {
+    var offset = settings.offset || '80%';
+    setItemsToReveal(settings.selectors);
+    hideInitially();
+    createWaypoints(offset);
+    refreshWaypointsListener();
+  };
+
+  var hideInitially = function hideInitially() {
     var _iteratorNormalCompletion3 = true;
     var _didIteratorError3 = false;
     var _iteratorError3 = undefined;
 
     try {
-      var _loop = function _loop() {
+      for (var _iterator3 = itemsToReveal[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
         var item = _step3.value;
 
-        new Waypoint({
-          element: item,
-          handler: function handler() {
-            item.classList.remove('reveal-item--hidden');
-          },
-          offset: offset.toString()
-        });
-      };
-
-      for (var _iterator3 = itemsToReveal[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
-        _loop();
+        item.classList.add('reveal-item', 'reveal-item--hidden');
       }
     } catch (err) {
       _didIteratorError3 = true;
@@ -1063,6 +1055,43 @@ var revealOnScroll = function revealOnScroll() {
       } finally {
         if (_didIteratorError3) {
           throw _iteratorError3;
+        }
+      }
+    }
+  };
+
+  var createWaypoints = function createWaypoints(offset) {
+    var _iteratorNormalCompletion4 = true;
+    var _didIteratorError4 = false;
+    var _iteratorError4 = undefined;
+
+    try {
+      var _loop = function _loop() {
+        var item = _step4.value;
+
+        new Waypoint({
+          element: item,
+          handler: function handler() {
+            item.classList.remove('reveal-item--hidden');
+          },
+          offset: offset.toString()
+        });
+      };
+
+      for (var _iterator4 = itemsToReveal[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
+        _loop();
+      }
+    } catch (err) {
+      _didIteratorError4 = true;
+      _iteratorError4 = err;
+    } finally {
+      try {
+        if (!_iteratorNormalCompletion4 && _iterator4.return) {
+          _iterator4.return();
+        }
+      } finally {
+        if (_didIteratorError4) {
+          throw _iteratorError4;
         }
       }
     }
@@ -1209,7 +1238,8 @@ var stickyHeader = function stickyHeader() {
 exports.default = stickyHeader();
 
 /***/ }),
-/* 5 */
+/* 5 */,
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
