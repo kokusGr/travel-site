@@ -1252,21 +1252,21 @@ a {
   bottom: 0;
   right: 0;
   left: 0;
-  background-color: rgba(255, 255, 255, .9);
-  z-index: 3;
-  -webkit-transition: all .5s ease-out;
+  background-color: rgba(255, 255, 255, .9);  
+  -webkit-transition: all .5s ease-out;  
   transition: all .5s ease-out;
-  opacity: 1;
-  visibility: visible;
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
-.modal--is-hidden {
-    opacity: 0;
-    visibility: hidden;
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
+.modal--is-visible {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    z-index: 3;
   }
 
 .modal__description {

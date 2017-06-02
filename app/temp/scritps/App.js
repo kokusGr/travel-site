@@ -889,7 +889,7 @@ var modal = function modal() {
   var closeButton = document.getElementsByClassName('modal__close-x')[0];
 
   var showModal = function showModal() {
-    modal.classList.remove('modal--is-hidden');
+    modal.classList.add('modal--is-visible');
   };
 
   var addEvents = function addEvents() {
@@ -922,11 +922,10 @@ var modal = function modal() {
   };
 
   var closeModal = function closeModal() {
-    modal.classList.add('modal--is-hidden');
+    modal.classList.remove('modal--is-visible');
   };
 
   var init = function init() {
-    closeModal();
     addEvents();
   };
 

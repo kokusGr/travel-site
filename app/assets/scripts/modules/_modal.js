@@ -6,7 +6,7 @@ var modal = function () {
   let closeButton = document.getElementsByClassName('modal__close-x')[0];
   
   let showModal = function () {
-    modal.classList.remove('modal--is-hidden');
+    modal.classList.add('modal--is-visible');
   };
   
   let addEvents = function () {
@@ -18,11 +18,10 @@ var modal = function () {
   };
   
   let closeModal = function () {
-    modal.classList.add('modal--is-hidden');
+    modal.classList.remove('modal--is-visible');
   };
   
   let init = function () {
-    closeModal();
     addEvents();
   };
   
